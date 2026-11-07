@@ -2,7 +2,7 @@
 
 :class:`FluxCanvas` is a dumb view: it knows how to show a placeholder and how to
 draw a single 1-D line from primitives handed to it. All the data reduction lives
-in :class:`~margaret.core.flux_model.FluxModel`, so new plot kinds can be added
+in :class:`~maggie.core.flux_model.FluxModel`, so new plot kinds can be added
 here without touching the model or the window.
 """
 
@@ -13,7 +13,7 @@ from typing import Optional, Tuple
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
 from matplotlib.figure import Figure
 
-from margaret.gui.theme import ACCENT
+from maggie.gui.theme import ACCENT
 
 
 class FluxCanvas(FigureCanvasQTAgg):

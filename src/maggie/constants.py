@@ -1,16 +1,16 @@
 """Application-wide constants and registries.
 
-This module holds the small pieces of configuration the rest of MARGARET keys
+This module holds the small pieces of configuration the rest of MAGGIE keys
 off - most importantly the ``FLUX_TYPES`` registry. Adding a new flux type (and
 therefore a new set of dimension-ordering options) is a one-line edit here.
 """
 
 from __future__ import annotations
 
-APP_NAME = "MARGARET"
+APP_NAME = "MAGGIE"
 APP_SUBTITLE = (
-    "Modular Analysis and Reactor Graphics Application "
-    "for Radiation and Energy Tallies"
+    "Mesh-Agnostic Graphics for Group-wise "
+    "Iteration and Evolution"
 )
 
 # Flux types known to the app. Each entry's ``axes`` tuple is the canonical

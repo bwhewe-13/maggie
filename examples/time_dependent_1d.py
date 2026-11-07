@@ -3,7 +3,7 @@
 Builds a synthetic ``phi(x, g, t)`` on a slab of width ``L``: the steady bump of
 ``steady_state_1d`` is set in motion, with each group's Gaussian sloshing at its
 own frequency on top of a global "power breathing" transient. The flux is stored
-in MARGARET's canonical ``(I, G, T)`` order (I = spatial cell, G = energy group,
+in MAGGIE's canonical ``(I, G, T)`` order (I = spatial cell, G = energy group,
 T = time step), so load it in the GUI as the "1D - Time Dependent Scalar Flux"
 type with the ``I x G x T`` dimension ordering.
 
@@ -24,7 +24,7 @@ from typing import Dict, Optional, Sequence, Tuple
 
 import numpy as np
 
-from margaret.io.arrays import save_arrays
+from maggie.io.arrays import save_arrays
 
 
 def phi(x, g, t, L=10.0, G=6, sigma=0.8, A=0.75, eps=0.4, T=5.0, d=1.0, omega0=2.0):

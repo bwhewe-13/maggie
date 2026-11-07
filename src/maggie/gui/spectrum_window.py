@@ -1,8 +1,8 @@
 """A pop-out window showing the energy spectrum at a single spatial cell.
 
-:class:`SpectrumWindow` is opened by :class:`~margaret.gui.start_page.StartPage`
+:class:`SpectrumWindow` is opened by :class:`~maggie.gui.start_page.StartPage`
 when the user clicks a point on the spatial flux plot. It reuses
-:class:`~margaret.gui.plot_canvas.FluxCanvas` so its styling matches the main
+:class:`~maggie.gui.plot_canvas.FluxCanvas` so its styling matches the main
 plot, and adds a "Log-log axes" toggle (energy spectra often span many decades).
 The window is reusable: each new click redraws it via :meth:`show_spectrum`.
 """
@@ -10,10 +10,10 @@ The window is reusable: each new click redraws it via :meth:`show_spectrum`.
 from __future__ import annotations
 
 from matplotlib.backends.backend_qtagg import NavigationToolbar2QT
-from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QCheckBox, QVBoxLayout, QWidget
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QCheckBox, QVBoxLayout, QWidget
 
-from margaret.gui.plot_canvas import FluxCanvas
+from maggie.gui.plot_canvas import FluxCanvas
 
 
 class SpectrumWindow(QWidget):

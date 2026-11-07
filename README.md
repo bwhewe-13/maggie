@@ -1,7 +1,7 @@
-# MARGARET
-Modular Analysis and Reactor Graphics Application for Radiation and Energy Tallies
+# MAGGIE
+Mesh-Agnostic Graphics for Group-wise Iteration and Evolution
 
-A PyQt6 application for loading and visualizing neutron flux data.
+A PySide6 application for loading and visualizing neutron flux data.
 
 ## Features
 
@@ -19,17 +19,17 @@ A PyQt6 application for loading and visualizing neutron flux data.
 ## Download
 
 Prebuilt executables for Windows, macOS, and Linux are attached to each
-[GitHub Release](https://github.com/bwhewe-13/margaret/releases) (no Python
+[GitHub Release](https://github.com/bwhewe-13/maggie/releases) (no Python
 install needed). Releases are built automatically when a `v*` tag is pushed;
 bump `version` in `pyproject.toml` to match when tagging.
 
-- **Windows**: unzip and run `margaret.exe`. SmartScreen may warn because the
+- **Windows**: unzip and run `maggie.exe`. SmartScreen may warn because the
   exe is unsigned — click "More info" → "Run anyway".
-- **macOS**: unzip and open `margaret.app`. The app is unsigned, so Gatekeeper
+- **macOS**: unzip and open `maggie.app`. The app is unsigned, so Gatekeeper
   blocks the first launch — right-click → Open, or run
-  `xattr -dr com.apple.quarantine margaret.app`. Pick the `arm64` zip for
+  `xattr -dr com.apple.quarantine maggie.app`. Pick the `arm64` zip for
   Apple Silicon or `x64` for Intel.
-- **Linux**: untar and run `./margaret`.
+- **Linux**: untar and run `./maggie`.
 
 The single-file executables self-extract on launch, so the first start takes a
 few seconds.
@@ -37,21 +37,21 @@ few seconds.
 ## Install
 
 ```bash
-pip install -e .          # runtime deps (PyQt6, matplotlib, numpy, h5py)
+pip install -e .          # runtime deps (PySide6, matplotlib, numpy, h5py)
 pip install -e ".[dev]"   # plus pytest / pytest-qt
 ```
 
 ## Run
 
 ```bash
-margaret              # installed console script (after pip install -e .)
-python -m margaret    # run as a module
+maggie              # installed console script (after pip install -e .)
+python -m maggie    # run as a module
 ```
 
 ## Layout
 
 ```
-src/margaret/
+src/maggie/
   constants.py        app metadata + registries (FLUX_TYPES, FILE_FILTER, ...)
   core/flux_model.py  FluxModel - flux + grids + reductions (no Qt, unit-tested)
   io/arrays.py        file -> numpy array loaders + container introspection
@@ -59,7 +59,7 @@ src/margaret/
   gui/array_picker.py dialog to choose an array from a multi-array file
   gui/start_page.py   main window: builds UI, owns model + canvas, wires signals
   app.py              entry point (main())
-  __main__.py         python -m margaret
+  __main__.py         python -m maggie
 ```
 
 ## Extending

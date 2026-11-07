@@ -13,7 +13,7 @@ from typing import Optional, Tuple
 
 import numpy as np
 
-from margaret.constants import ORDER_SEP
+from maggie.constants import ORDER_SEP
 
 # Index of each axis label within a canonical array shape.
 _AXIS_INDEX = {"I": 0, "G": 1, "T": 2}

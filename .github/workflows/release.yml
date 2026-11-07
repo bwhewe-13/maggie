@@ -54,21 +54,21 @@ jobs:
       - name: Install package and PyInstaller
         run: pip install . pyinstaller
       - name: Build executable
-        run: pyinstaller --noconfirm --onefile --windowed --name margaret --paths src --exclude-module PySide6 --exclude-module PySide2 --exclude-module PyQt5 packaging/launcher.py
+        run: pyinstaller --noconfirm --onefile --windowed --name maggie --paths src --exclude-module PyQt6 --exclude-module PyQt5 --exclude-module PySide2 packaging/launcher.py
       - name: Package (Windows)
         if: runner.os == 'Windows'
         shell: pwsh
-        run: Compress-Archive -Path dist/margaret.exe -DestinationPath "margaret-${{ github.ref_name }}-${{ matrix.target }}.zip"
+        run: Compress-Archive -Path dist/maggie.exe -DestinationPath "maggie-${{ github.ref_name }}-${{ matrix.target }}.zip"
       - name: Package (macOS)
         if: runner.os == 'macOS'
-        run: ditto -c -k --keepParent dist/margaret.app "margaret-${{ github.ref_name }}-${{ matrix.target }}.zip"
+        run: ditto -c -k --keepParent dist/maggie.app "maggie-${{ github.ref_name }}-${{ matrix.target }}.zip"
       - name: Package (Linux)
         if: runner.os == 'Linux'
-        run: tar -czf "margaret-${{ github.ref_name }}-${{ matrix.target }}.tar.gz" -C dist margaret
+        run: tar -czf "maggie-${{ github.ref_name }}-${{ matrix.target }}.tar.gz" -C dist maggie
       - uses: actions/upload-artifact@v4
         with:
-          name: margaret-${{ matrix.target }}
-          path: margaret-${{ github.ref_name }}-${{ matrix.target }}.*
+          name: maggie-${{ matrix.target }}
+          path: maggie-${{ github.ref_name }}-${{ matrix.target }}.*
           if-no-files-found: error
 
   release:

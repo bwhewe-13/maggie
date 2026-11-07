@@ -1,7 +1,7 @@
-"""The MARGARET start-page window.
+"""The MAGGIE start-page window.
 
-``StartPage`` builds the UI, owns a :class:`~margaret.core.flux_model.FluxModel`
-and a :class:`~margaret.gui.plot_canvas.FluxCanvas`, and wires Qt signals to
+``StartPage`` builds the UI, owns a :class:`~maggie.core.flux_model.FluxModel`
+and a :class:`~maggie.gui.plot_canvas.FluxCanvas`, and wires Qt signals to
 them. It holds only widget state - every data operation is delegated to the
 model, and all drawing to the canvas.
 """
@@ -14,9 +14,9 @@ from typing import Optional
 
 import numpy as np
 from matplotlib.backends.backend_qtagg import NavigationToolbar2QT
-from PyQt6.QtCore import Qt
-from PyQt6.QtGui import QDoubleValidator, QFont, QIntValidator
-from PyQt6.QtWidgets import (
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QDoubleValidator, QFont, QIntValidator
+from PySide6.QtWidgets import (
     QCheckBox,
     QComboBox,
     QFileDialog,
@@ -35,22 +35,22 @@ from PyQt6.QtWidgets import (
     QWidget,
 )
 
-from margaret.constants import (
+from maggie.constants import (
     APP_NAME,
     APP_SUBTITLE,
     FILE_FILTER,
     FLUX_TYPES,
     ORDER_SEP,
 )
-from margaret.core.flux_model import FluxModel
-from margaret.gui.array_picker import ArrayPickerDialog
-from margaret.gui.plot_canvas import FluxCanvas
-from margaret.gui.spectrum_window import SpectrumWindow
-from margaret.io.arrays import list_arrays, load_array
+from maggie.core.flux_model import FluxModel
+from maggie.gui.array_picker import ArrayPickerDialog
+from maggie.gui.plot_canvas import FluxCanvas
+from maggie.gui.spectrum_window import SpectrumWindow
+from maggie.io.arrays import list_arrays, load_array
 
 
 class StartPage(QMainWindow):
-    """Top-level MARGARET start page."""
+    """Top-level MAGGIE start page."""
 
     def __init__(self) -> None:
         super().__init__()

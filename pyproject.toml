@@ -3,14 +3,14 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "margaret"
+name = "maggie"
 version = "0.1.0"
-description = "Modular Analysis and Reactor Graphics Application for Radiation and Energy Tallies"
+description = "Mesh-Agnostic Graphics for Group-wise Iteration and Evolution"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 license = { text = "MIT" }
 dependencies = [
-    "PyQt6>=6.5",
+    "PySide6>=6.5",
     "matplotlib>=3.7",
     "numpy>=1.24",
     "h5py>=3.0",
@@ -23,10 +23,10 @@ dev = [
 ]
 
 [project.scripts]
-margaret = "margaret.app:main"
+maggie = "maggie.app:main"
 
 [project.gui-scripts]
-margaret-gui = "margaret.app:main"
+maggie-gui = "maggie.app:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

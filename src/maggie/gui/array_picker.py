@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import List, Optional
 
-from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import (
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import (
     QDialog,
     QDialogButtonBox,
     QLabel,
@@ -14,8 +14,8 @@ from PyQt6.QtWidgets import (
     QVBoxLayout,
 )
 
-from margaret.constants import PREFERRED_KEYS
-from margaret.io.arrays import ArrayInfo
+from maggie.constants import PREFERRED_KEYS
+from maggie.io.arrays import ArrayInfo
 
 
 class ArrayPickerDialog(QDialog):

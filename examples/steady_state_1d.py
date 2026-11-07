@@ -2,7 +2,7 @@
 
 Builds a synthetic ``phi(x, g)`` on a slab of width ``L`` for ``G`` energy
 groups: a sine fundamental mode plus a group-dependent Gaussian bump whose
-centre migrates with energy. The flux is stored in MARGARET's canonical
+centre migrates with energy. The flux is stored in MAGGIE's canonical
 ``(I, G)`` order (I = spatial cell, G = energy group), so load it in the GUI as
 the "1D - Scalar Flux" type with the ``I x G`` dimension ordering.
 
@@ -23,7 +23,7 @@ from typing import Dict, Optional, Sequence, Tuple
 
 import numpy as np
 
-from margaret.io.arrays import save_arrays
+from maggie.io.arrays import save_arrays
 
 
 def group_flux(x, g, L=10.0, G=6, sigma=0.8, A=0.75):

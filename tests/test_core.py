@@ -1,6 +1,6 @@
 """Headless tests for the Qt-free core: FluxModel and the array loaders.
 
-These import no PyQt6 and need no display.
+These import no Qt and need no display.
 """
 
 import os
@@ -8,8 +8,8 @@ import os
 import numpy as np
 import pytest
 
-from margaret.core.flux_model import FluxModel
-from margaret.io.arrays import list_arrays, load_array, save_arrays
+from maggie.core.flux_model import FluxModel
+from maggie.io.arrays import list_arrays, load_array, save_arrays
 
 
 # --------------------------------------------------------------------------- #

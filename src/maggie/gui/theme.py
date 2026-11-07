@@ -1,4 +1,4 @@
-"""Central theme for MARGARET: colour palette and the app-wide Qt Style Sheet.
+"""Central theme for MAGGIE: colour palette and the app-wide Qt Style Sheet.
 
 Qt Style Sheets (QSS) are Qt's CSS dialect. Keeping the whole look in one place
 means every window shares one coherent, light, single-accent aesthetic - the UI
@@ -174,5 +174,5 @@ QLabel[role="warn"] {{
 
 
 def apply_theme(app) -> None:
-    """Install the MARGARET stylesheet on a ``QApplication``."""
+    """Install the MAGGIE stylesheet on a ``QApplication``."""
     app.setStyleSheet(STYLESHEET)

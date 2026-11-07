@@ -17,7 +17,7 @@ from typing import List, Mapping, NamedTuple, Optional
 import numpy as np
 from numpy.lib import format as npy_format
 
-from margaret.constants import PREFERRED_KEYS
+from maggie.constants import PREFERRED_KEYS
 
 
 class ArrayInfo(NamedTuple):
